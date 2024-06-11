@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-synthesis: none;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  color: white;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+button:disabled {
+  background-color: #3a3a3a;
+  cursor: not-allowed;
+  border-color: transparent;
+  color: #7a7a7a;
+}
+
+/* Input styles */
+input {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-family: inherit;
+  background-color: #fff;
+  color: #000;
+  transition: border-color 0.25s;
+}
+input:focus {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+input:disabled {
+  background-color: #f0f0f0;
+  border-color: #d3d3d3;
+  color: #a1a1a1;
+}
+
+input {
+  border: 1px solid var(--foreground);
+}
