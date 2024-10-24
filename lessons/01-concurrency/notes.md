@@ -45,9 +45,4 @@ Is this actually better? Yes, I didn't believe, but it is!
 
 Needed to fix this for example: https://github.com/signavio/react-mentions/pull/659/files
 
-### What's coming next
-
-Suspense for data fetching?
-React Server Components (RSC)
-
 Let's dive in!

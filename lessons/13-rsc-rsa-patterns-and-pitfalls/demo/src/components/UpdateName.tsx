@@ -6,15 +6,33 @@ import { useServerAction } from "zsa-react";
 type Props = { username: string };
 
 export const UpdateName: React.FC<Props> = ({ username }) => {
-  const { isPending, execute, data } = useServerAction(updateUsernameAction);
+  const { isPending, execute, data } = useServerAction(updateUsernameAction, {
+    initialData: username,
+  });
 
   return (
-    <form action={execute}>
+    <form
+      onSubmit={async (event) => {
+        event.preventDefault();
+        const form = event.currentTarget;
+
+        const formData = new FormData(form);
+        const [data, err] = await execute(formData);
+
+        if (err) {
+          // handle error
+          console.log(err);
+          return;
+        }
+
+        form.reset();
+      }}
+    >
       <input
         type="text"
         name="username"
         disabled={isPending}
-        defaultValue={username}
+        defaultValue={data}
       />
       <button type="submit" disabled={isPending}>
         Update

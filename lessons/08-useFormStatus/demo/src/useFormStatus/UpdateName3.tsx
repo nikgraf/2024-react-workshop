@@ -1,7 +1,7 @@
 import { useActionState } from "react";
-import { useFormStatus } from "react-dom";
 import { showToast } from "../showToast";
 import { successAsync } from "../utils/successAsync";
+import { FancyButton } from "./FancyButton";
 
 type Data = { id: string; name: string | null };
 
@@ -10,20 +10,8 @@ type Response = {
   data: Data;
 };
 
-export const FancyButton: React.FC = () => {
-  const { pending, method, action, data } = useFormStatus();
-
-  console.log({ pending, method, action, data });
-
-  return (
-    <button type="submit" disabled={pending}>
-      Update
-    </button>
-  );
-};
-
 export const UpdateName3: React.FC = () => {
-  const [state, submitAction, isPending] = useActionState<Response, FormData>(
+  const [state, submitAction] = useActionState<Response, FormData>(
     async (previousState, formData) => {
       const name = formData.get("name") as string;
       const result = await successAsync(name);

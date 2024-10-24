@@ -1,10 +1,13 @@
-import { UpdateName } from "./action/UpdateName";
+import ErrorBoundary from "./ErrorBoundary";
+import { UpdateName } from "./UpdateName";
 
 function App() {
   return (
     <>
       <h1>Workshop</h1>
-      <UpdateName />
+      <ErrorBoundary fallback={"Ops"}>
+        <UpdateName />
+      </ErrorBoundary>
     </>
   );
 }

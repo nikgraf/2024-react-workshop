@@ -2,7 +2,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 
 export const getName = async () => {
-  const filePath = path.join(__dirname, "data.txt");
+  const filePath = path.join("./", "data.txt");
   // check if file exists
   try {
     await fs.access(filePath);

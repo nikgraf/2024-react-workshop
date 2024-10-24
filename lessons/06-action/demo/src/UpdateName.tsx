@@ -41,4 +41,25 @@ export const UpdateName: React.FC = () => {
       </button>
     </div>
   );
+
+  // const submitAction = async (formData) => {
+  //   console.log("submitAction", formData);
+  //   console.log(formData.get("username"));
+  // };
+
+  // return (
+  //   <div>
+  //     <div>Name: {name}</div>
+  //     <div>Servername: {serverName}</div>
+
+  //     <form action={submitAction}>
+  //       <input
+  //         name="username"
+  //         value={name}
+  //         onChange={(event) => setName(event.target.value)}
+  //       />
+  //       <button disabled={isPending}>Update</button>
+  //     </form>
+  //   </div>
+  // );
 };
