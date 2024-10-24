@@ -1,5 +1,9 @@
 ## RSC/RSA Pitfalls
 
+### Closure data encryption
+
+https://nextjs.org/docs/app/building-your-application/data-fetching/server-actions-and-mutations#closures-and-encryption
+
 ### Do not auth in layout (Next.js)!
 
 https://x.com/sebmarkbage/status/1765415322247426530

@@ -20,9 +20,9 @@ function App() {
   const [cart, setCart] = useState<OrderedProduct[]>([]);
 
   const addToCart = async ({ id, amount }: { id: string; amount: number }) => {
-    // simulate an API call
     updateOptimisticCart({ id, amount });
 
+    // simulate an API call
     await new Promise((resolve) => setTimeout(resolve, 1000));
     const product = products.find((product) => product.id === id);
     if (!product) {

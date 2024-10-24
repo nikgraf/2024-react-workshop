@@ -1,10 +1,11 @@
+import ErrorBoundary from "./ErrorBoundary";
 import { UpdateName } from "./UpdateName";
 
 function App() {
   return (
-    <>
+    <ErrorBoundary fallback={"Ops"}>
       <UpdateName />
-    </>
+    </ErrorBoundary>
   );
 }
 

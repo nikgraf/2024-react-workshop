@@ -54,6 +54,8 @@ https://blog.logrocket.com/exploring-react-18-three-new-apis/
 
 https://jser.dev/2023-08-02-usesyncexternalstore/
 
+Another great use-case: ClientOnly component https://www.nico.fyi/blog/use-sync-external-store-in-react
+
 ## Resources
 
 - https://blog.saeloun.com/2021/12/30/react-18-usesyncexternalstore-api
